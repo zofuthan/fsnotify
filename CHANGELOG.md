@@ -2,50 +2,50 @@
 
 ## v1.2.0 / 2015-02-08
 
-* inotify: use epoll to wake up readEvents [#66](https://github.com/go-fsnotify/fsnotify/pull/66) (thanks @PieterD)
-* inotify: closing watcher should now always shut down goroutine [#63](https://github.com/go-fsnotify/fsnotify/pull/63) (thanks @PieterD)
-* kqueue: close kqueue after removing watches, fixes [#59](https://github.com/go-fsnotify/fsnotify/issues/59)
+* inotify: use epoll to wake up readEvents [#66](https://github.com/zofuthan/fsnotify/pull/66) (thanks @PieterD)
+* inotify: closing watcher should now always shut down goroutine [#63](https://github.com/zofuthan/fsnotify/pull/63) (thanks @PieterD)
+* kqueue: close kqueue after removing watches, fixes [#59](https://github.com/zofuthan/fsnotify/issues/59)
 
 ## v1.1.1 / 2015-02-05
 
-* inotify: Retry read on EINTR [#61](https://github.com/go-fsnotify/fsnotify/issues/61) (thanks @PieterD)
+* inotify: Retry read on EINTR [#61](https://github.com/zofuthan/fsnotify/issues/61) (thanks @PieterD)
 
 ## v1.1.0 / 2014-12-12
 
-* kqueue: rework internals [#43](https://github.com/go-fsnotify/fsnotify/pull/43)
+* kqueue: rework internals [#43](https://github.com/zofuthan/fsnotify/pull/43)
     * add low-level functions
     * only need to store flags on directories
-    * less mutexes [#13](https://github.com/go-fsnotify/fsnotify/issues/13)
+    * less mutexes [#13](https://github.com/zofuthan/fsnotify/issues/13)
     * done can be an unbuffered channel
     * remove calls to os.NewSyscallError
-* More efficient string concatenation for Event.String() [#52](https://github.com/go-fsnotify/fsnotify/pull/52) (thanks @mdlayher)
-* kqueue: fix regression in  rework causing subdirectories to be watched [#48](https://github.com/go-fsnotify/fsnotify/issues/48)
-* kqueue: cleanup internal watch before sending remove event [#51](https://github.com/go-fsnotify/fsnotify/issues/51)
+* More efficient string concatenation for Event.String() [#52](https://github.com/zofuthan/fsnotify/pull/52) (thanks @mdlayher)
+* kqueue: fix regression in  rework causing subdirectories to be watched [#48](https://github.com/zofuthan/fsnotify/issues/48)
+* kqueue: cleanup internal watch before sending remove event [#51](https://github.com/zofuthan/fsnotify/issues/51)
 
 ## v1.0.4 / 2014-09-07
 
 * kqueue: add dragonfly to the build tags.
 * Rename source code files, rearrange code so exported APIs are at the top.
-* Add done channel to example code. [#37](https://github.com/go-fsnotify/fsnotify/pull/37) (thanks @chenyukang)
+* Add done channel to example code. [#37](https://github.com/zofuthan/fsnotify/pull/37) (thanks @chenyukang)
 
 ## v1.0.3 / 2014-08-19
 
-* [Fix] Windows MOVED_TO now translates to Create like on BSD and Linux. [#36](https://github.com/go-fsnotify/fsnotify/issues/36)
+* [Fix] Windows MOVED_TO now translates to Create like on BSD and Linux. [#36](https://github.com/zofuthan/fsnotify/issues/36)
 
 ## v1.0.2 / 2014-08-17
 
-* [Fix] Missing create events on OS X. [#14](https://github.com/go-fsnotify/fsnotify/issues/14) (thanks @zhsso)
+* [Fix] Missing create events on OS X. [#14](https://github.com/zofuthan/fsnotify/issues/14) (thanks @zhsso)
 * [Fix] Make ./path and path equivalent. (thanks @zhsso)
 
 ## v1.0.0 / 2014-08-15
 
 * [API] Remove AddWatch on Windows, use Add.
-* Improve documentation for exported identifiers. [#30](https://github.com/go-fsnotify/fsnotify/issues/30)
+* Improve documentation for exported identifiers. [#30](https://github.com/zofuthan/fsnotify/issues/30)
 * Minor updates based on feedback from golint.
 
 ## dev / 2014-07-09
 
-* Moved to [github.com/go-fsnotify/fsnotify](https://github.com/go-fsnotify/fsnotify).
+* Moved to [github.com/zofuthan/fsnotify](https://github.com/zofuthan/fsnotify).
 * Use os.NewSyscallError instead of returning errno (thanks @hariharan-uno)
  
 ## dev / 2014-07-04
@@ -55,7 +55,7 @@
 
 ## dev / 2014-06-28
 
-* [API] Don't set the Write Op for attribute notifications [#4](https://github.com/go-fsnotify/fsnotify/issues/4)
+* [API] Don't set the Write Op for attribute notifications [#4](https://github.com/zofuthan/fsnotify/issues/4)
 * Fix for String() method on Event (thanks Alex Brainman)
 * Don't build on Plan 9 or Solaris (thanks @4ad)
 
@@ -93,11 +93,11 @@
 
 ## v0.9.3 / 2014-12-31
 
-* kqueue: cleanup internal watch before sending remove event [#51](https://github.com/go-fsnotify/fsnotify/issues/51)
+* kqueue: cleanup internal watch before sending remove event [#51](https://github.com/zofuthan/fsnotify/issues/51)
 
 ## v0.9.2 / 2014-08-17
 
-* [Backport] Fix missing create events on OS X. [#14](https://github.com/go-fsnotify/fsnotify/issues/14) (thanks @zhsso)
+* [Backport] Fix missing create events on OS X. [#14](https://github.com/zofuthan/fsnotify/issues/14) (thanks @zhsso)
 
 ## v0.9.1 / 2014-06-12
 
